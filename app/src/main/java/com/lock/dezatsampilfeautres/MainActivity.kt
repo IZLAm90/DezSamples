@@ -8,6 +8,7 @@ import android.content.pm.ActivityInfo
 import android.graphics.drawable.shapes.Shape
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.ViewGroup
 import android.webkit.JavascriptInterface
 import android.webkit.WebView
@@ -128,7 +129,9 @@ class MainActivity : ComponentActivity() {
 
                             }
                         )
-                        Card(modifier = Modifier.fillMaxWidth().height(150.dp)) {
+                        Card(modifier = Modifier
+                            .fillMaxWidth()
+                            .height(350.dp)) {
                             val mUrl = "https://three60-image-viewer.onrender.com/"
 
                             // Adding a WebView inside AndroidView
@@ -144,7 +147,7 @@ class MainActivity : ComponentActivity() {
                                     settings.useWideViewPort =true
                                     settings.javaScriptCanOpenWindowsAutomatically= true
 
-                                    addJavascriptInterface(WebAppInterface(),"islam")
+                                    addJavascriptInterface(WebAppInterface(),"Android")
                                     loadUrl(mUrl)
 
                                 }
@@ -164,7 +167,7 @@ class MainActivity : ComponentActivity() {
  class WebAppInterface() {
     @JavascriptInterface
     fun getImagePathFromIslam() : String{
-        return  "https://drive.google.com/file/d/1NeEjjkG8TNFhtPjBMmWdqqEALPbhbT6H/view?usp=sharing"
+        return  "https://www.360cities.net/en/image/covolo-di-lusiana-parete-del-soio#274.89,12.90,70.0"
     }
 }
 
