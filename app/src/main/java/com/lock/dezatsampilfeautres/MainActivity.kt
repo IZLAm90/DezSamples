@@ -165,9 +165,12 @@ class MainActivity : ComponentActivity() {
 }
 
  class WebAppInterface() {
+//    https://www.360cities.net/en/image/covolo-di-lusiana-parete-del-soio#274.89,12.90,70.0
+//     https://pannellum.org/images/alma.jpg
+//     https://pannellum.org/images/alma.jpg
     @JavascriptInterface
     fun getImagePathFromIslam() : String{
-        return  "https://www.360cities.net/en/image/covolo-di-lusiana-parete-del-soio#274.89,12.90,70.0"
+        return  "https://pannellum.org/images/alma.jpg"
     }
 }
 
